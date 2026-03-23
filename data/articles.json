@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "How Namibia’s bird conservation projects build community resilience (commentary)",
+    "source": "Mongabay",
+    "category": "ecology",
+    "hoursAgo": 6,
+    "excerpt": "In Namibia’s Karas Region, birds are more than symbols of freedom or beauty — they are teachers of resilience. Their survival in arid landscapes mirrors the endurance of the communities who live alongside them. Grassroots bird conservation projects here have revealed something...",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "discovery",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 107,
+    "sourceUrl": "https://news.mongabay.com/2026/03/how-namibias-bird-conservation-projects-build-community-resilience-commentary/"
+  },
+  {
+    "id": 2,
+    "title": "2026 Kelp Forest Monitoring Trainings Now Open! Register Today!",
+    "source": "Reef Check",
+    "category": "marine",
+    "hoursAgo": 622,
+    "excerpt": "Reef Check’s Kelp Forest Monitoring training classes for 2026 are now open for registration! There are five opportunities in California, Oregon and Baja California for divers to get involved as citizen scientists. The post 2026 Kelp Forest Monitoring Trainings Now Open! Register...",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "project",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 106,
+    "sourceUrl": "https://www.reefcheck.org/2026-kelp-forest-monitoring-trainings-now-open-register-today/"
+  },
+  {
+    "id": 3,
+    "title": "Reef Check Coral Data Featured in Two Recent Publications",
+    "source": "Reef Check",
+    "category": "marine",
+    "hoursAgo": 622,
+    "excerpt": "Earlier this month, Nature Communications published the article, “Severe and widespread coral reef damage during the 2014-2017 Global Coral Bleaching Event”. The paper relied on Reef Check’s coral reef data and warns that “the impacts of ocean warming on coral reefs are...",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "project",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 110,
+    "sourceUrl": "https://www.reefcheck.org/reef-check-coral-data-featured-in-two-recent-publications/"
+  }
+]
