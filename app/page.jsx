@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useCallback, useRef } from "react";
-import articlesData from '../data/articles.js';
+import articlesData from "../data/articles.js";
+
 /* ─── THEME TOKENS ─── */
 const THEMES = {
   light: {
@@ -51,7 +52,10 @@ const HERO_GRADIENTS = [
   ["#462521", "#6B3A36", "#A67C52"],
 ];
 
-const ARTICLES = articlesData;
+/* ─── ARTICLES: loaded from data file (auto-updated by RSS bot) ─── */
+const ARTICLES = (Array.isArray(articlesData) && articlesData.length > 0) ? articlesData : [
+  { id:1, title:"Welcome to Fieldwork — stories are loading", source:"Fieldwork", category:"ecology", hoursAgo:1, excerpt:"Our RSS bot is fetching citizen science stories from 20+ sources. New stories appear automatically twice a day. Check back soon!", credibility:{evidence:0,source:0,replication:0,funding:0}, type:"project", featured:true, readTime:"1 min" },
+];
 
 function relativeTime(hours) {
   if (hours < 1) return "Just now";
@@ -137,7 +141,7 @@ function ShareButton({ article, t }) {
 /* ─── FEATURED CARD ─── */
 function FeaturedCard({ article, bookmarks, toggleBookmark, t }) {
   const cat = CATEGORIES.find(c => c.id === article.category);
-  const grad = HERO_GRADIENTS[article.heroImg || 0];
+  const grad = HERO_GRADIENTS[article.heroImg ?? (article.id % HERO_GRADIENTS.length)];
   return (
     <div style={{
       borderRadius:20, overflow:"hidden", cursor:"pointer",
@@ -158,11 +162,6 @@ function FeaturedCard({ article, bookmarks, toggleBookmark, t }) {
           <span style={{ background:"#ffffffEE", color:cat.color, padding:"5px 12px", borderRadius:100, fontSize:12, fontWeight:600, fontFamily:"'Nunito Sans',sans-serif", display:"flex", alignItems:"center", gap:5 }}>
             {cat.icon} {cat.label}
           </span>
-          {article.trending && (
-            <span style={{ background:"#FEF3C7", color:"#92400E", padding:"5px 10px", borderRadius:100, fontSize:10, fontWeight:700, fontFamily:"'Nunito Sans',sans-serif", letterSpacing:"0.06em", textTransform:"uppercase", display:"flex", alignItems:"center", gap:3 }}>
-              🔥 Trending
-            </span>
-          )}
         </div>
         <div style={{ position:"absolute", top:14, right:14, display:"flex", gap:6, alignItems:"center" }}>
           <CredibilityLabel credibility={article.credibility} compact t={{...t, surface:"#fff"}} />
@@ -208,11 +207,6 @@ function ArticleCard({ article, bookmarks, toggleBookmark, t }) {
             <span style={{ background:`${cat.color}12`, color:cat.color, padding:"3px 10px", borderRadius:100, fontSize:11, fontWeight:600, fontFamily:"'Nunito Sans',sans-serif", display:"inline-flex", alignItems:"center", gap:4 }}>
               {cat.icon} {cat.label}
             </span>
-            {article.trending && (
-              <span style={{ background: t === THEMES.dark ? "#78350F40" : "#FEF3C7", color:t.trending, padding:"3px 8px", borderRadius:100, fontSize:10, fontWeight:700, fontFamily:"'Nunito Sans',sans-serif", display:"inline-flex", alignItems:"center", gap:2 }}>
-                🔥 {article.trendScore}
-              </span>
-            )}
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:6, flexShrink:0 }}>
             <CredibilityLabel credibility={article.credibility} compact t={t} />
@@ -265,7 +259,6 @@ function ArticleRow({ article, bookmarks, toggleBookmark, t }) {
       <div style={{ flex:1, minWidth:0 }}>
         <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:3 }}>
           <span style={{ fontFamily:"'Nunito Sans',sans-serif", fontSize:11, fontWeight:600, color:cat.color }}>{cat.label}</span>
-          {article.trending && <span style={{ color:t.trending, fontSize:11 }}>🔥</span>}
           <span style={{ fontFamily:"'Nunito Sans',sans-serif", fontSize:11, color:t.textMuted }}>· {relativeTime(article.hoursAgo)}</span>
         </div>
         <h3 style={{ fontFamily:"'Lora',serif", fontSize:16, fontWeight:600, lineHeight:1.3, color:t.textPrimary, margin:0, overflow:"hidden", textOverflow:"ellipsis", display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical" }}>
@@ -446,7 +439,7 @@ function AboutPage({ t, onNavigate }) {
 /* ─── STORY VIEW PAGE ─── */
 function StoryPage({ article, t, onBack, bookmarks, toggleBookmark }) {
   const cat = CATEGORIES.find(c => c.id === article.category);
-  const grad = HERO_GRADIENTS[article.heroImg || article.id % 4];
+  const grad = HERO_GRADIENTS[article.heroImg ?? (article.id % HERO_GRADIENTS.length)];
   const related = ARTICLES.filter(a => a.id !== article.id && a.category === article.category).slice(0, 3);
 
   return (
@@ -463,7 +456,6 @@ function StoryPage({ article, t, onBack, bookmarks, toggleBookmark }) {
           <div style={{ display:"flex", gap:8, marginBottom:12 }}>
             <span style={{ background:"#ffffffEE", color:cat.color, padding:"5px 12px", borderRadius:100, fontSize:12, fontWeight:600, fontFamily:"'Nunito Sans',sans-serif" }}>{cat.icon} {cat.label}</span>
             <span style={{ background:"#ffffff30", color:"#fff", padding:"5px 10px", borderRadius:100, fontSize:11, fontWeight:600, fontFamily:"'Nunito Sans',sans-serif", textTransform:"capitalize" }}>{article.type}</span>
-            {article.trending && <span style={{ background:"#FEF3C7", color:"#92400E", padding:"5px 10px", borderRadius:100, fontSize:10, fontWeight:700, fontFamily:"'Nunito Sans',sans-serif" }}>🔥 Trending</span>}
           </div>
           <h1 style={{ fontFamily:"'Lora',serif", fontSize:30, fontWeight:600, color:"#fff", margin:0, lineHeight:1.25, maxWidth:640, textShadow:"0 2px 12px rgba(0,0,0,0.3)" }}>
             {article.title}
