@@ -1,7 +1,6 @@
-import articlesData from '../data/articles.js';
 'use client';
 import { useState, useEffect, useCallback, useRef } from "react";
-
+import articlesData from '../data/articles.js';
 /* ─── THEME TOKENS ─── */
 const THEMES = {
   light: {
