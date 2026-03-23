@@ -1,0 +1,37 @@
+name: Fetch RSS Feeds
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run RSS fetcher
+        run: python scripts/fetch_feeds.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Fieldwork Bot"
+          git config user.email "bot@fieldwork.news"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No new stories found."
+          else
+            git commit -m "🌱 Auto-update: new citizen science stories"
+            git push
+          fi
