@@ -1,6 +1,66 @@
 [
   {
     "id": 1,
+    "title": "Molten Sulfurous World Blurs Exoplanet Categories",
+    "source": "Sky & Telescope",
+    "category": "space",
+    "hoursAgo": 180,
+    "excerpt": "An oddly low-density planet isn't quite rocky or gaseous — instead, it might have a deep ocean of magma and a stinky, sulfurous atmosphere. The post Molten Sulfurous World Blurs Exoplanet Categories appeared first on Sky & Telescope.",
+    "credibility": {
+      "evidence": 2,
+      "source": 3,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "discovery",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 104,
+    "sourceUrl": "https://skyandtelescope.org/astronomy-news/molten-sulfurous-world-blurs-exoplanet-categories/"
+  },
+  {
+    "id": 2,
+    "title": "Who’s who in the Zoo – Kameswara Bharadwaj Mantha",
+    "source": "Zooniverse Blog",
+    "category": "tech",
+    "hoursAgo": 10,
+    "excerpt": "In this edition of our Who's who in the Zoo series meet Kameswara, a Senior AI Research Scientist based at the University of Missouri-Kansas City.",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 2,
+      "funding": 0
+    },
+    "type": "project",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 102,
+    "sourceUrl": "https://blog.zooniverse.org/2026/03/23/whos-who-in-the-zoo-kameswara-bharadwaj-mantha/"
+  },
+  {
+    "id": 3,
+    "title": "Who’s who in the Zoo – Michelle Yuen",
+    "source": "Zooniverse Blog",
+    "category": "tech",
+    "hoursAgo": 586,
+    "excerpt": "In this edition of Who's who in the Zoo, meet Michelle Yuen, a Zooniverse backend developer.",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 2,
+      "funding": 0
+    },
+    "type": "project",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 101,
+    "sourceUrl": "https://blog.zooniverse.org/2026/02/27/whos-who-in-the-zoo-michelle-yuen/"
+  },
+  {
+    "id": 4,
     "title": "How Namibia’s bird conservation projects build community resilience (commentary)",
     "source": "Mongabay",
     "category": "ecology",
@@ -20,7 +80,7 @@
     "sourceUrl": "https://news.mongabay.com/2026/03/how-namibias-bird-conservation-projects-build-community-resilience-commentary/"
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "2026 Kelp Forest Monitoring Trainings Now Open! Register Today!",
     "source": "Reef Check",
     "category": "marine",
@@ -40,7 +100,7 @@
     "sourceUrl": "https://www.reefcheck.org/2026-kelp-forest-monitoring-trainings-now-open-register-today/"
   },
   {
-    "id": 3,
+    "id": 6,
     "title": "Reef Check Coral Data Featured in Two Recent Publications",
     "source": "Reef Check",
     "category": "marine",
