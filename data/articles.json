@@ -1,6 +1,66 @@
 [
   {
     "id": 1,
+    "title": "JWST reveals a strange sulfur world unlike any planet we know",
+    "source": "ScienceDaily",
+    "category": "tech",
+    "hoursAgo": 6,
+    "excerpt": "Astronomers have identified a strange new kind of exoplanet that challenges how scientists classify worlds beyond our Solar System. The planet, L 98-59 d, appears to contain a vast ocean of molten rock beneath its surface that traps large amounts of sulfur deep inside...",
+    "credibility": {
+      "evidence": 1,
+      "source": 0,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "discovery",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 108,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/03/260317190802.htm"
+  },
+  {
+    "id": 2,
+    "title": "New Course! Strategic Communication for Participatory Science Practitioners",
+    "source": "Citizen Science Association",
+    "category": "tech",
+    "hoursAgo": 720,
+    "excerpt": "Participatory science leaders may try to communicate with everyone about everything—social media, newsletters, participant engagement, blogs, media outreach—and end up burned out with little to show for it. This course teaches a different approach: strategic communication that...",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "project",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 111,
+    "sourceUrl": "https://participatorysciences.org/2026/02/18/new-course-strategic-communication-for-participatory-science-practitioners/?utm_source=rss&utm_medium=rss&utm_campaign=new-course-strategic-communication-for-participatory-science-practitioners"
+  },
+  {
+    "id": 3,
+    "title": "2026 Call for Interest in AAPS Leadership (Board and more)",
+    "source": "Citizen Science Association",
+    "category": "tech",
+    "hoursAgo": 720,
+    "excerpt": "The Association for Advancing Participatory Sciences (AAPS) is seeking passionate individuals to play a leadership role in guiding the Association&#8217;s future activities. There are several ways to get involved, depending on your interests, experiences, and skills, including...",
+    "credibility": {
+      "evidence": 2,
+      "source": 2,
+      "replication": 1,
+      "funding": 0
+    },
+    "type": "project",
+    "featured": false,
+    "readTime": "2 min",
+    "trending": false,
+    "trendScore": 111,
+    "sourceUrl": "https://participatorysciences.org/2026/02/12/2026-call-for-interest-in-aaps-leadership-board-and-more/?utm_source=rss&utm_medium=rss&utm_campaign=2026-call-for-interest-in-aaps-leadership-board-and-more"
+  },
+  {
+    "id": 4,
     "title": "Molten Sulfurous World Blurs Exoplanet Categories",
     "source": "Sky & Telescope",
     "category": "space",
@@ -20,7 +80,7 @@
     "sourceUrl": "https://skyandtelescope.org/astronomy-news/molten-sulfurous-world-blurs-exoplanet-categories/"
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "Who’s who in the Zoo – Kameswara Bharadwaj Mantha",
     "source": "Zooniverse Blog",
     "category": "tech",
@@ -40,7 +100,7 @@
     "sourceUrl": "https://blog.zooniverse.org/2026/03/23/whos-who-in-the-zoo-kameswara-bharadwaj-mantha/"
   },
   {
-    "id": 3,
+    "id": 6,
     "title": "Who’s who in the Zoo – Michelle Yuen",
     "source": "Zooniverse Blog",
     "category": "tech",
@@ -60,7 +120,7 @@
     "sourceUrl": "https://blog.zooniverse.org/2026/02/27/whos-who-in-the-zoo-michelle-yuen/"
   },
   {
-    "id": 4,
+    "id": 7,
     "title": "How Namibia’s bird conservation projects build community resilience (commentary)",
     "source": "Mongabay",
     "category": "ecology",
@@ -80,7 +140,7 @@
     "sourceUrl": "https://news.mongabay.com/2026/03/how-namibias-bird-conservation-projects-build-community-resilience-commentary/"
   },
   {
-    "id": 5,
+    "id": 8,
     "title": "2026 Kelp Forest Monitoring Trainings Now Open! Register Today!",
     "source": "Reef Check",
     "category": "marine",
@@ -100,7 +160,7 @@
     "sourceUrl": "https://www.reefcheck.org/2026-kelp-forest-monitoring-trainings-now-open-register-today/"
   },
   {
-    "id": 6,
+    "id": 9,
     "title": "Reef Check Coral Data Featured in Two Recent Publications",
     "source": "Reef Check",
     "category": "marine",
